@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loyalsnap Changelog</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: #F3F6FA;
+    color: #2A2F47;
+  }
+
+  /* HEADER */
+  .header {
+    background: #2A2F47;
+    padding: 24px 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .header-left .logo {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #A6AABC;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .header-left h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 36px;
+  }
+  .header-right {
+    text-align: right;
+    color: #A6AABC;
+    font-size: 13px;
+    line-height: 22px;
+    padding-top: 4px;
+  }
+
+  /* MAIN */
+  .main { max-width: 960px; margin: 0 auto; padding: 32px 24px 60px; }
+
+  /* RELEASE BLOCK */
+  .release { margin-bottom: 48px; }
+  .release-date {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2A2F47;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E8ECEF;
+  }
+
+  /* SECTION CARD */
+  .section-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #E8ECEF;
+  }
+  .section-icon { font-size: 22px; line-height: 1; margin-top: 2px; }
+  .section-header-text h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2A2F47;
+    line-height: 26px;
+  }
+  .section-header-text p {
+    font-size: 13px;
+    color: #64687D;
+    line-height: 18px;
+    margin-top: 2px;
+  }
+
+  /* ITEM */
+  .item { padding: 12px 0; border-bottom: 1px solid #F3F6FA; }
+  .item:last-child { border-bottom: none; padding-bottom: 0; }
+  .item-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+  .item-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2A2F47;
+  }
+  .item-desc {
+    font-size: 14px;
+    color: #64687D;
+    line-height: 20px;
+  }
+  .item-bullets {
+    margin-top: 8px;
+    padding-left: 18px;
+  }
+  .item-bullets li {
+    font-size: 14px;
+    color: #64687D;
+    line-height: 22px;
+    margin-bottom: 2px;
+  }
+
+  /* BADGES */
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+  .badge-new      { background: #EEF1FB; color: #3255B8; }
+  .badge-improved { background: #E8F7F5; color: #1EB298; }
+  .badge-fixed    { background: #FAEEED; color: #CC3931; }
+  .badge-infra    { background: #FFF8E6; color: #b07c00; }
+  .badge-sunset   { background: #EDEEF2; color: #64687D; }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #A6AABC;
+    padding: 32px 24px;
+    border-top: 1px solid #E8ECEF;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div class="logo">L O Y A L S N A P</div>
+    <h1>Changelog</h1>
+  </div>
+  <div class="header-right">
+    Product Updates<br>
+    Feb – Mar 2026
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- ===================== MARCH 9, 2026 ===================== -->
+  <div class="release">
+    <div class="release-date">March 9, 2026</div>
+
+    <!-- AI -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🤖</div>
+        <div class="section-header-text">
+          <h2>AI</h2>
+          <p>Context management, smarter suggestions</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-new">New</span>
+          <span class="item-title">AI Context Manager</span>
+        </div>
+        <div class="item-desc">Define brand and studio-level context that powers AI Suggestions in the inbox. Set brand voice, policies, FAQs, and link to external resources — AI will pull content from URLs automatically.</div>
+        <ul class="item-bullets">
+          <li>Brand-wide context with studio-level overrides</li>
+          <li>Append to or fully override brand context per studio</li>
+          <li>Admin-only for now; broader access coming soon</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-improved">Improved</span>
+          <span class="item-title">AI-suggested Responses</span>
+        </div>
+        <div class="item-desc">Improved context gathering, higher quality output, better messages.</div>
+      </div>
+    </div>
+
+    <!-- CLIENT DASHBOARD -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">📊</div>
+        <div class="section-header-text">
+          <h2>Client Dashboard</h2>
+          <p>Utilization visibility</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-new">New</span>
+          <span class="item-title">Dashboard Utilization Reporting</span>
+        </div>
+        <div class="item-desc">A new utilization widget is now front and center on your Portal home page, showing how effectively your team is acting on dashboard opportunities. See at a glance how many opportunities surfaced in the last 24 hours and how many received outreach (text, email, or call).</div>
+      </div>
+    </div>
+
+    <!-- MESSAGING -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">💬</div>
+        <div class="section-header-text">
+          <h2>Messaging & Communication</h2>
+          <p>Link shortening, email blasts, notes</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-new">New</span>
+          <span class="item-title">Link Shortener V2</span>
+        </div>
+        <div class="item-desc">Rebuilt the link shortening system from the ground up — improving deliverability, visibility, and analytics for SMS blasts.</div>
+        <ul class="item-bullets">
+          <li>Links now appear shortened in sent messages when viewed in the portal</li>
+          <li>Custom domains can be configured per-brand for branded links</li>
+          <li>Per-user click tracking captures exactly who clicked what (Portal functionality coming soon)</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-fixed">Fixed</span>
+          <span class="item-title">Email Blast Delivery</span>
+        </div>
+        <div class="item-desc">Resolved a bug where subscribed clients were incorrectly excluded from email blasts.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-improved">Improved</span>
+          <span class="item-title">Phone Number Display</span>
+        </div>
+        <div class="item-desc">Phone numbers now display in a consistent, readable format across the Portal.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-new">New</span>
+          <span class="item-title">Pinned Client Notes</span>
+        </div>
+        <div class="item-desc">Users can now pin client notes. Pinned notes appear at the top of the client notes list.</div>
+      </div>
+    </div>
+
+    <!-- AUTOMATIONS -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">⚙️</div>
+        <div class="section-header-text">
+          <h2>Automations</h2>
+          <p>Brand-level controls, franchise enforcement</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-new">New</span>
+          <span class="item-title">Brand-level Automation Controls</span>
+        </div>
+        <div class="item-desc">Portal admins with franchise permissions can now manage automations and templates at the brand level, ensuring every location follows the same playbook. When enabled, automation settings are enforced and applied consistently across all studios.</div>
+        <ul class="item-bullets">
+          <li>Keeps messaging and workflows aligned with brand standards across locations</li>
+          <li>Franchise-level users and support users retain full editing access</li>
+          <li>Ideal for enterprise brands with established sales and communication playbooks</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CLUBREADY -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🔗</div>
+        <div class="section-header-text">
+          <h2>ClubReady Integration</h2>
+          <p>Opt-in/out, sync, form notes</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-improved">Improved</span>
+          <span class="item-title">SMS Opt-In & Opt-Out Handling</span>
+        </div>
+        <div class="item-desc">Overhauled how Loyalsnap handles ClubReady opt-in/opt-out data, addressing a major source of support tickets.</div>
+        <ul class="item-bullets">
+          <li>Portal users can now re-opt-in clients marked as "hard opted out" in ClubReady by confirming consent</li>
+          <li>Transactional messages (appointment confirmations, reminders) are no longer blocked by inaccurate ClubReady opt-out data</li>
+          <li>Marketing messages continue to respect opt-out preferences</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-new">New</span>
+          <span class="item-title">Communication Preferences Sync</span>
+        </div>
+        <div class="item-desc">Loyalsnap now processes ClubReady's communication preferences webhooks, so opt-in and opt-out changes sync faster between systems.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-new">New</span>
+          <span class="item-title">Form Submission Notes</span>
+        </div>
+        <div class="item-desc">Form responses are now automatically posted as a note in ClubReady with a link to the form — giving staff immediate visibility without needing Loyalsnap access.</div>
+      </div>
+    </div>
+
+    <!-- MINDBODY -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">📅</div>
+        <div class="section-header-text">
+          <h2>Mindbody Integration</h2>
+          <p>Appointment sync improvements</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-improved">Improved</span>
+          <span class="item-title">Appointment Sync</span>
+        </div>
+        <div class="item-desc">Improved support for scheduled appointments.</div>
+      </div>
+    </div>
+
+    <!-- FORMS -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">📝</div>
+        <div class="section-header-text">
+          <h2>Forms & Waivers</h2>
+          <p>Background color, redirect URLs</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-fixed">Fixed</span>
+          <span class="item-title">Background Color Display</span>
+        </div>
+        <div class="item-desc">Custom background colors set in form branding now render correctly on published forms.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-fixed">Fixed</span>
+          <span class="item-title">Redirect URL Handling</span>
+        </div>
+        <div class="item-desc">Redirect links after form submission now work even without <code>https://</code>. Added validation to ensure users enter a valid redirect URL.</div>
+      </div>
+    </div>
+
+    <!-- PORTAL -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🖥️</div>
+        <div class="section-header-text">
+          <h2>Portal Improvements</h2>
+          <p>Navigation, tasks, A2P</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-improved">Improved</span>
+          <span class="item-title">Client Detail Navigation</span>
+        </div>
+        <div class="item-desc">Redesigned the navigation buttons at the top of the client detail drawer to be more prominent and easier to discover.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-new">New</span>
+          <span class="item-title">Tasks Count in Navigation</span>
+        </div>
+        <div class="item-desc">Now showing the number of incomplete and overdue tasks in the left-hand navigation bar.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-improved">Improved</span>
+          <span class="item-title">Tasks Date & Time</span>
+        </div>
+        <div class="item-desc">Portal users can now select both a date and time when defining a task's due date. Previously, only a date could be specified.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-improved">Improved</span>
+          <span class="item-title">A2P Studio Information Validation</span>
+        </div>
+        <div class="item-desc">Improved validation on the studio information page to provide clearer guidance when required information is missing or formatted incorrectly, helping users move through setup more smoothly.</div>
+      </div>
+    </div>
+  </div><!-- /release March -->
+
+
+  <!-- ===================== FEBRUARY 9, 2026 ===================== -->
+  <div class="release">
+    <div class="release-date">February 9, 2026</div>
+
+    <!-- MESSAGING -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">💬</div>
+        <div class="section-header-text">
+          <h2>Messaging & Communication</h2>
+          <p>Inbox history, WhatsApp reliability</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-improved">Improved</span>
+          <span class="item-title">Texting Inbox Now Loads All Conversations</span>
+        </div>
+        <div class="item-desc">Previously limited to 20 recent conversations — now you can access your complete history.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-improved">Improved</span>
+          <span class="item-title">WhatsApp Reliability & Deliverability</span>
+        </div>
+        <ul class="item-bullets">
+          <li><strong>Smarter sending</strong> — Natural "typing..." patterns make automated messages appear more human</li>
+          <li><strong>Better pacing</strong> — Reduced risk of account suspensions from message spikes</li>
+          <li><strong>Faster experience</strong> — Sending WhatsApp in the portal now feels instant</li>
+          <li><strong>AI-powered variation</strong> — Subtle message adjustments to humanize automated messages</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- AUTOMATIONS -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">⚙️</div>
+        <div class="section-header-text">
+          <h2>Automations</h2>
+          <p>Welcome messages, visit counting</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-fixed">Fixed</span>
+          <span class="item-title">Duplicate Welcome Messages</span>
+        </div>
+        <div class="item-desc">New clients now receive exactly one welcome message — no more double sends.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-improved">Improved</span>
+          <span class="item-title">Smarter Visit Counting</span>
+        </div>
+        <ul class="item-bullets">
+          <li>Booking prompts now factor in scheduled visits, so clients with upcoming classes won't get "book now" messages</li>
+          <li>Upsell automations count only completed visits for better timing</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SEGMENTATION -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🎯</div>
+        <div class="section-header-text">
+          <h2>Client Segmentation & Lists</h2>
+          <p>Cross-location copying, MarianaTek home location</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-new">New</span>
+          <span class="item-title">Copy Dynamic Client Lists Between Locations</span>
+        </div>
+        <div class="item-desc">Duplicate your segmentation rules to other locations in a few clicks — no more manual recreation.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-improved">Improved</span>
+          <span class="item-title">Home Location for MarianaTek</span>
+        </div>
+        <ul class="item-bullets">
+          <li>Home Location badge now displays correctly for visiting clients</li>
+          <li>Multi-location studios get a flexible location selector for more precise targeting</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-fixed">Fixed</span>
+          <span class="item-title">Static Client Lists Improvements</span>
+        </div>
+        <div class="item-desc">Bug fixes for more reliable manual list management.</div>
+      </div>
+    </div>
+
+    <!-- CLUBREADY -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🔗</div>
+        <div class="section-header-text">
+          <h2>ClubReady Integration</h2>
+          <p>Form sync, call notes, contracts, opt-in</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-new">New</span>
+          <span class="item-title">Form Submissions Now Sync</span>
+        </div>
+        <div class="item-desc">Form submissions automatically create notes in ClubReady — no manual data entry.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-new">New</span>
+          <span class="item-title">Dashboard Calls Now Sync</span>
+        </div>
+        <div class="item-desc">Calls logged in Loyalsnap now appear as notes in ClubReady for complete client records.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-fixed">Fixed</span>
+          <span class="item-title">Better Contract & Package Data</span>
+        </div>
+        <div class="item-desc">Fixed missing contracts and packages by syncing "disabled" packages and auto-inferring missing data from payment records.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-improved">Improved</span>
+          <span class="item-title">SMS Opt-In Handling</span>
+        </div>
+        <ul class="item-bullets">
+          <li>Hard opt-outs now sync automatically from Twilio</li>
+          <li>Separate controls for marketing vs. transactional SMS</li>
+          <li>Better re-opt-in support when clients change preferences in ClubReady</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MARIANATEK -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🔗</div>
+        <div class="section-header-text">
+          <h2>MarianaTek Integration</h2>
+          <p>Contract statuses, purchase sync</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-new">New</span>
+          <span class="item-title">Contract Statuses Supported</span>
+        </div>
+        <div class="item-desc">"Terminated" and "pending start date" contracts now sync properly — use them in your segmentation.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-fixed">Fixed</span>
+          <span class="item-title">Better Purchase Sync</span>
+        </div>
+        <div class="item-desc">Now capturing purchases tied to parent orders that were previously missed.</div>
+      </div>
+    </div>
+
+    <!-- FORMS -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">📝</div>
+        <div class="section-header-text">
+          <h2>Forms & Waivers</h2>
+          <p>Redirect URLs, waiver confirmation emails</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-new">New</span>
+          <span class="item-title">Post-Submission Redirect URLs</span>
+        </div>
+        <div class="item-desc">Send clients to a custom thank-you page after form submission — great for tracking conversions.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-new">New</span>
+          <span class="item-title">Waiver Confirmation Emails</span>
+        </div>
+        <div class="item-desc">Clients receive a PDF of their signed waiver via email automatically.</div>
+      </div>
+    </div>
+
+    <!-- STUDIO SETUP -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🏢</div>
+        <div class="section-header-text">
+          <h2>Studio Setup & Multi-Location Management</h2>
+          <p>A2P onboarding</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-improved">Improved</span>
+          <span class="item-title">Streamlined A2P Registration</span>
+        </div>
+        <div class="item-desc">New studios get texting set up faster. Existing brands benefit from approved A2P details for even quicker onboarding.</div>
+      </div>
+    </div>
+
+    <!-- PERFORMANCE -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🚀</div>
+        <div class="section-header-text">
+          <h2>Performance & Portal Improvements</h2>
+          <p>Speed, reliability, UI polish</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-infra">Infra</span>
+          <span class="item-title">Portal Technology</span>
+        </div>
+        <div class="item-desc">Behind-the-scenes improvements that boost performance and allow us to deliver new features faster.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-improved">Improved</span>
+          <span class="item-title">Template Loading</span>
+        </div>
+        <div class="item-desc">Noticeable speed improvements for studios with large template libraries.</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-improved">Improved</span>
+          <span class="item-title">Additional UI Improvements</span>
+        </div>
+        <ul class="item-bullets">
+          <li>Line breaks display correctly in inbox messages</li>
+          <li>Clearer payment method validation guidance</li>
+          <li>"Manage Response Templates" button for easier access</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="badge badge-fixed">Fixed</span>
+          <span class="item-title">SMS Blast Recipient Counts</span>
+        </div>
+        <div class="item-desc">Fixed a bug where an old or cached value was briefly displayed before the correct recipient count loaded.</div>
+      </div>
+    </div>
+
+  </div><!-- /release February -->
+
+</div><!-- /main -->
+
+<div class="footer">
+  Loyalsnap Changelog · Feb – Mar 2026
+</div>
+
+</body>
+</html>
